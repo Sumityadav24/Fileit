@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href=" {% static 'myapp/login.css' %} ">
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-light justify-content-between">
+			<h1>Fileit</h1>
+			<a class="navbar-brand" href=" {% url 'signup' %} ">Sign Up</a>	
+		  </nav>
+		  {% if messages %}
+		  {% for msg in messages %}
+			 <h3 class="msg">{{msg.message}}</h3> 
+		  {% endfor %}
+	  {% endif %}
+		<div class="container">         
+			<form action="" method="post">
+				<h1>Login</h1>
+				{% csrf_token %} Username
+				<input
+					type="text"
+					name="username"
+					maxlength="150"
+					autofocus
+					required
+					id="id_username" />
+				Password
+				<input
+					type="password"
+					name="password"
+					maxlength="128"
+					required
+					id="id_password" />
+				<input type="submit" id="btn" value="Submit" />
+			</form>
+		</div>
+	</body>
+</html>

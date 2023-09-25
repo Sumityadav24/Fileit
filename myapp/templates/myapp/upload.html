@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Fileit-From any part of the world"/>
+
+<link rel="stylesheet" href=" {% static 'myapp/upload.css' %} ">
+<title></title>
+</head>
+<body>
+    <nav class="nav justify-content-center">
+        <h1>Fileit</h1>
+      <a class="nav-link" href="/logout">Logout</a>
+    </nav>
+<div class="container ">
+    <div class="main"">
+        <h1 class="mb-3">Upload Image</h1>
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form}}
+                    <input type="submit" value="Submit" class="btn">
+                </form>
+    </div>
+    <div class="row">
+        {% for x in  img %}
+        <div class="col">
+            
+                <img src="{{x.photo.url}}" alt="" class="card-img-top" width="300px" height="300px">
+          
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

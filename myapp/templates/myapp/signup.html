@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="{% static 'myapp/signup.css' %}">
+<title>SignUp</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <h1>Fileit</h1>
+        <a class="navbar-brand" href=" {% url 'login' %} ">Login</a>
+        
+      </nav>
+<div class="container">
+
+
+    <form action="" method="post" novalidate required>
+        <h1>Register</h1>
+        {% csrf_token %}
+        Name:<input type="text" name="name" id="">
+
+        Email:<input type="email" name="email" id="">
+
+        Password:<input type="password" name="pass" id="">
+
+            <input type="submit" id="btn" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
