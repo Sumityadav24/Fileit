@@ -82,7 +82,7 @@ $ pip install -r requirements.txt
 # Run the project
 $ python manage.py runserver
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://127.0.0.1:8000/>
 ```
 
 
