@@ -9,7 +9,6 @@
 <h1 align="center">CLIAssignment</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Python/Fileit?color=56BEB8">
 
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/Sumityadav24/Fileit?color=56BEB8">
 
